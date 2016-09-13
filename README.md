@@ -1,10 +1,13 @@
 1.darknet model to caffemodel
+
 python ./python/ConvertYolo2Caffe/convert.py train_val.prototxt  yolo.weights caffemodel_save_path
 
 2. Test
+
 ./build/tools/yolo deploy.prototxt caffmodel_path image_path
 
 3. My trained caffemodel
+
 [yolo-face](https://pan.baidu.com/s/1o8rmBKe)
 
 
