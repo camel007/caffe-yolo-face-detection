@@ -306,7 +306,7 @@ message ParamSpec {
 // NOTE
 // Update the next available ID when you add a new LayerParameter field.
 //
-// LayerParameter next available layer-specific ID: 146 (last added: parameter_param)
+// LayerParameter next available layer-specific ID: 147 (last added: detect_param)
 message LayerParameter {
   optional string name = 1; // the layer name
   optional string type = 2; // the layer type
@@ -367,6 +367,7 @@ message LayerParameter {
   optional ConvolutionParameter convolution_param = 106;
   optional CropParameter crop_param = 144;
   optional DataParameter data_param = 107;
+  optional DetectParameter detect_param = 146;
   optional DropoutParameter dropout_param = 108;
   optional DummyDataParameter dummy_data_param = 109;
   optional EltwiseParameter eltwise_param = 110;
@@ -1376,4 +1377,19 @@ message PReLUParameter {
   optional FillerParameter filler = 1;
   // Whether or not slope paramters are shared across channels.
   optional bool channel_shared = 2 [default = false];
+}
+
+message DetectParameter{
+optional uint32 classes = 1 [default = 1];
+optional uint32 coords = 2 [default = 4];
+optional uint32 rescore = 3 [default = 1];
+optional uint32 side = 4 [default = 11];
+optional bool softmax = 5 [default = false];
+optional bool sqrt = 6 [default = true];
+optional float jitter = 7 [default = 0.2];
+optional float object_scale = 8 [default = 1.0];
+optional float noobject_scale = 9 [default = 0.5];
+optional float class_scale = 10 [default = 1.0];
+optional float coord_scale = 11 [default = 5];
+optional uint32 num = 12 [default = 2];
 }

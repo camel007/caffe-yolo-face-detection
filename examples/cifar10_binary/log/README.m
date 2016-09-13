@@ -1,1 +1,0 @@
-Save XNOR LOG
