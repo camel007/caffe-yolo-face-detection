@@ -13,7 +13,12 @@ python ./python/ConvertYolo2Caffe/convert.py train_val.prototxt  yolo.weights ca
 
 ##Reference
 1, http://blog.csdn.net/u012235274/article/details/52120152.
+
 2, https://github.com/xingwangsfu/caffe-yolo.
+
 3, https://github.com/loswensiana/BWN-XNOR-caffe.
+
 4, https://github.com/BVLC/caffe.
+
 5, http://pjreddie.com/darknet/yolo/.
+
